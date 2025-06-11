@@ -9,7 +9,7 @@ import json
 from groq import Groq
 import shutil
 
-client = Groq(api_key="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")
+client = Groq(api_key="")
 
 app = FastAPI()
 
