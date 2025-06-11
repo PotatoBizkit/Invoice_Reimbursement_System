@@ -56,7 +56,7 @@ API Endpoint 2: RAG Chatbot
 * Endpoint: /ragbot
 * Method: POST
 * Body: JSON
-  * query: your question about any stored invoice(s)
+  * query: your question about any stored invoice
 
   Curl Example:
     ```bash
@@ -64,7 +64,7 @@ API Endpoint 2: RAG Chatbot
       -H "Content-Type: application/json" \
       -d "{\"query\": \"Show me all fully reimbursed invoices for Yuji\"}"
 
-Returns a chatbot-style response using RAG (retrieves invoice context, then uses LLM to reply).
+Returns a chatbot-style response using RAG.
 
 ## Technical Details
 
@@ -82,7 +82,7 @@ Returns a chatbot-style response using RAG (retrieves invoice context, then uses
     ├── ragbot.py               # Chatbot logic using RAG + LLM
     ├── testing_vector_database.py  # Utility to test vector search results
     ├── chroma_db/              # Local persistent vector DB files
-    └── Dataset/                # Example invoice and policy files (excluded from Git)
+    └── Dataset/                # Example invoice and policy files
 
 ## Prompt Design
 
