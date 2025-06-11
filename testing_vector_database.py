@@ -7,7 +7,7 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 
 query_text = "cab ride reimbursement"  
 filters = {
-    # "employee_name": "Denji",
+    "employee_name": "Denji",
     # "status": "Partially Reimbursed"
 }
 results = collection.get(include=["documents", "metadatas"])
@@ -55,8 +55,9 @@ else:
             reason = meta.get('reason')
             safe_reason = reason.encode('ascii', 'ignore').decode('ascii') if reason else "None"
             print(f"Reason: {safe_reason}")
-            print(f"--- Invoice Text Preview ---")
+            print(f"\n--- Invoice Text Preview ---\n")
             safe_text = text.encode('ascii', 'ignore').decode('ascii')
             print(safe_text[:300], "...")
+            print("------------------------\n")
         except Exception as e:
             print(f"Error printing search result {i+1}: {e}")
