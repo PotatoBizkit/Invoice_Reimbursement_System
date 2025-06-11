@@ -192,3 +192,17 @@ cython_debug/
 #  refer to https://docs.cursor.com/context/ignore-files
 .cursorignore
 .cursorindexingignore
+
+#To ignore for this project
+temp_policy.docx
+temp_invoices.zip
+temp_invoices_folder/
+__pycache__/
+*.pyc
+chroma_db/
+Dataset/
+.DS_Store
+Thumbs.db
+-F
+-H
+-d
